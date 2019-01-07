@@ -11,7 +11,7 @@
     </router-link>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
-    <span class="sale" v-show="selectedPart.onSale">Sale!</span>
+    <span v-pin="{bottom: '5px', right:'5px'}" class="sale" v-show="selectedPart.onSale">Sale!</span>
   </div>
 </template>
 
@@ -84,9 +84,9 @@ export default {
   border: 3px solid #aaa;
 }
 .sale {
-  position: absolute;
+  /* position: absolute;
   bottom: 5px;
-  right: 5px;
+  right: 5px; */
   color: white;
   background-color: red;
   padding: 3px;
